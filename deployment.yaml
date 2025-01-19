@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bminfotrade
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bminfotrade
+  template:
+    metadata:
+      labels:
+        app: bminfotrade
+    spec:
+      nodeSelector:
+        worker: one
+      containers:
+      - name: bminfotrade
+        image: <<dockerhubusername>>/bminfotrade:latest
+        ports:
+        - containerPort: 3000
