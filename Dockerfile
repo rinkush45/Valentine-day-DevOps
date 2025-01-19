@@ -8,7 +8,7 @@ COPY nextpage.html /usr/share/nginx/html/
 COPY style.css /usr/share/nginx/html/
 
 # Expose port 80 for web traffic
-EXPOSE 3000
+EXPOSE 80
 
 # Verify file permissions
 RUN chmod 644 /usr/share/nginx/html/finally.html && \
