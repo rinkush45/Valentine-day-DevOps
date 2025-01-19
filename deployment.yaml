@@ -16,6 +16,6 @@ spec:
         worker: one
       containers:
       - name: bminfotrade
-        image: <<dockerhubusername>>/bminfotrade:latest
+        image: rinkush45/bminfotrade:latest
         ports:
         - containerPort: 3000
